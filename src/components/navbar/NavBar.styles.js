@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
 export const NavBarStyled = styled.nav`
-  background-color: white;
-  border-bottom: 1px solid #e8e1f0;
+  background-color: var(--color-primary-dark);
+  border-bottom: 1px solid var(--color-navbar-border);
   position: sticky;
   top: 0;
   z-index: 100;
@@ -20,11 +20,6 @@ export const NavBarStyled = styled.nav`
     align-items: center;
     text-decoration: none;
     color: inherit;
-    transition: transform 0.3s ease;
-
-    &:hover {
-        transform: translateY(-1px);
-    }
 
     img {
         width: auto;
@@ -40,7 +35,7 @@ export const NavBarStyled = styled.nav`
             font-family: monospace;
             font-size: 1rem;
             font-weight: 600;
-            color: #4a235a;
+            color: var(--color-white);
             margin: 0;
             line-height: 1.2;
         }
@@ -59,7 +54,7 @@ export const NavBarStyled = styled.nav`
         li {
           a {
             text-decoration: none;
-            color: #7d3c98;
+            color: var(--color-white);
             font-size: 0.9rem;
             font-weight: 500;
             letter-spacing: 0.5px;
@@ -68,7 +63,7 @@ export const NavBarStyled = styled.nav`
             position: relative;
 
             &:hover {
-              color: #9b59b6;
+              color: var(--color-accent-light);
               transform: translateY(-1px);
             }
 
@@ -79,7 +74,7 @@ export const NavBarStyled = styled.nav`
               height: 2px;
               bottom: 0;
               left: 0;
-              background-color: #bb8fce;
+              background-color: var(--color-accent-light);
               transition: width 0.3s ease;
             }
 
