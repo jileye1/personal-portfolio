@@ -6,7 +6,7 @@ const BaseLayout =({ title, children }) => {
     return (
         <div>
             <NavBar title={title}/>
-            <p>{children}</p>
+            {children}
             <Footer/>
         </div>
     )
