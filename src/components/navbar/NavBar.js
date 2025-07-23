@@ -1,5 +1,5 @@
 import * as React from 'react'
-import { Link } from 'gatsby'
+import { LinkText } from '../LinkText'
 import { NavBarStyled } from './NavBar.styles'
 import icon from '../../images/icon.png'
 
@@ -18,19 +18,19 @@ const NavBar = ({ title }) => {
                 <nav>
                     <ul>
                         <li>
-                            <Link to='/'>
+                            <LinkText to='/'>
                                 about
-                            </Link>
+                            </LinkText>
                         </li>
                         <li>
-                            <Link to='/projects'>
+                            <LinkText to='/projects'>
                                 projects
-                            </Link>
+                            </LinkText>
                         </li>
                         <li>
-                            <Link to='/now'>
+                            <LinkText to='/now'>
                                 now
-                            </Link>
+                            </LinkText>
                         </li>
                     </ul>                    
                 </nav>
