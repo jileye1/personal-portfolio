@@ -7,6 +7,7 @@ import icon from '../../images/icon.png'
 const NavBar = ({ title }) => {
     return (
         <NavBarStyled>
+            <div className='header-content'>
             <div className='logo-container'>
                 <img src={icon} alt='matcha icon'/>
                 <div className='title'>
@@ -33,6 +34,7 @@ const NavBar = ({ title }) => {
                         </li>
                     </ul>                    
                 </nav>
+            </div>
             </div>
         </NavBarStyled>
     )

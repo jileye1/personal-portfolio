@@ -8,12 +8,14 @@ export const NavBarStyled = styled.nav`
   z-index: 100;
   box-shadow: 0 2px 10px rgba(147, 112, 219, 0.1);
 
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 2rem;
+  .header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+  }
 
   .logo-container {
     display: flex;
