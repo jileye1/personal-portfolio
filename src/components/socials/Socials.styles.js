@@ -13,8 +13,8 @@ export const SocialLinks = styled.ul`
             text-decoration: none;
             font-size: 1.1rem;
             transition: all 0.3s ease;
-            padding: 0.7rem;
-            border-radius: 4px;
+            padding: 0.1rem 0.7rem;
+            display: inline-block;
 
             &:hover {
                 color: var(--color-primary);
