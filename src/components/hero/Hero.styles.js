@@ -12,14 +12,17 @@ export const HeroContentStyled = styled.div`
       bottom: 0;
       width: 30%;
       min-width: 320px;
-      background: linear-gradient(135deg, var(--color-background-alt) 0%, var(--color-background-gradient) 100%);
+      background: var(--color-background-gradient);
       z-index: -1;
     }
 
     /* Main Content */
     .main-content {
         min-height: calc(100vh - 80px);
-        padding: 2rem;
+        padding: clamp(2rem, 8vw, 6rem);
+        display: flex;
+        justify-content: center;
+        align-content: center;
     }
 
     /* Hero Section */
@@ -27,31 +30,24 @@ export const HeroContentStyled = styled.div`
         max-width: 1200px;
         margin: 0 auto;
         display: grid;
-        grid-template-columns: 400px 1fr;
+        grid-template-columns: minmax(300px, 350px) minmax(350px, 450px);
         gap: 4rem;
         align-items: center;
-        padding-top: 2rem;
+        padding: 2rem;
     }
 
     /* Profile Card */
     .profile-card {
-        background: linear-gradient(145deg, rgba(255, 255, 255, 0.95), rgba(248, 245, 252, 0.95));
+        background: var(--color-white);
         padding: 2rem;
         text-align: center;
-        box-shadow: 0 8px 32px rgba(147, 112, 219, 0.15);
+        box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.15);
         backdrop-filter: blur(10px);
         position: sticky;
         top: 120px;
         overflow: hidden;
-    
-    
-        /* Subtle hover effect */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
         
-        &:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(147, 112, 219, 0.15);
-        }
+
 
         .profile-image-container {
             margin-bottom: 1.5rem;
@@ -131,14 +127,22 @@ export const HeroContentStyled = styled.div`
 
     /* Responsive Design */
     @media (max-width: 768px) {
+        .main-content {
+            padding: 2rem; /* Reduce from 6rem to 2rem on mobile */
+        }
+
         .hero-section {
             grid-template-columns: 1fr;
+            align-content: center;
             gap: 2rem;
             padding-top: 1rem;
         }
 
         .profile-card {
             position: static;
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
             order: 1;
         }
 
