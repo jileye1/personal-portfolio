@@ -1,8 +1,15 @@
 import * as React from 'react'
+import { FooterStyled } from './Footer.styles'
+import Socials from '../socials/Socials'
 
 const Footer = () => {
     return (
-        <footer>Footer</footer>
+        <FooterStyled>
+            <div className='content'>
+                <div className='name'>© Josie Leye 2025</div>
+                <Socials />
+            </div>
+        </FooterStyled>
     )
 }
 
