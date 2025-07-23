@@ -52,19 +52,6 @@ export const ProfileCard = styled(FloatingCard)`
 export const HeroContentStyled = styled.div`
     min-height: 100vh;
 
-    /* Create the sectioned background effect */
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: 30%;
-      min-width: 320px;
-      background: var(--color-background-gradient);
-      z-index: -1;
-    }
-
     /* Main Content */
     .main-content {
         min-height: calc(100vh - 80px);
@@ -121,6 +108,7 @@ export const HeroContentStyled = styled.div`
 
     /* Responsive Design */
     @media (max-width: 768px) {
+
         .main-content {
             padding: 2rem; /* Reduce from 6rem to 2rem on mobile */
         }

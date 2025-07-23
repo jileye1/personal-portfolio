@@ -44,6 +44,31 @@ const GlobalStyle = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  /* Global background effect for all pages */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 30%;
+    min-width: 320px;
+    background: var(--color-background-gradient);
+    z-index: -1;
+  }
+
+  /* Responsive background for mobile */
+  @media (max-width: 768px) {
+    body::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 30%;
+      min-height: 350px;
+      width: 100%;
+    }
+  }
+
   /* Smooth scrolling */
   html {
     scroll-behavior: smooth;
