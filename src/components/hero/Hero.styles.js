@@ -1,4 +1,53 @@
 import styled from "styled-components"
+import { FloatingCard } from "../FloatingCard"
+
+export const ProfileCard = styled(FloatingCard)`
+    text-align: center;
+    position: sticky;
+
+    .profile-image-container {
+        margin-bottom: 1.5rem;
+        position: relative;
+        z-index: 2;
+
+        .profile-image {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+
+    .profile-info {
+        margin-bottom: 1rem;
+        position: relative;
+        z-index: 2;
+        padding: 1rem;
+        margin-top: -1rem;
+
+        .profile-name {
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            color: var(--color-text-primary);
+        }
+
+        .profile-divider {
+            width: 50px;
+            height: 3px;
+            background: var(--color-primary-light);
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+
+        .profile-title {
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            color: var(--color-text-secondary);
+            font-weight: 500;
+        }
+    }
+`
 
 export const HeroContentStyled = styled.div`
     min-height: 100vh;
@@ -36,62 +85,7 @@ export const HeroContentStyled = styled.div`
         padding: 2rem;
     }
 
-    /* Profile Card */
-    .profile-card {
-        background: var(--color-white);
-        padding: 2rem;
-        text-align: center;
-        box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.15);
-        backdrop-filter: blur(10px);
-        position: sticky;
-        top: 120px;
-        overflow: hidden;
-        
-
-
-        .profile-image-container {
-            margin-bottom: 1.5rem;
-            position: relative;
-            z-index: 2;
-
-            .profile-image {
-                width: 120px;
-                height: 120px;
-                border-radius: 50%;
-                object-fit: cover;
-            }
-        }
-
-        .profile-info {
-            margin-bottom: 1rem;
-            position: relative;
-            z-index: 2;
-            padding: 1rem;
-            margin-top: -1rem;
-
-            .profile-name {
-                font-size: 1.8rem;
-                font-weight: 600;
-                margin-bottom: 1rem;
-                color: var(--color-text-primary);
-            }
-
-            .profile-divider {
-                width: 50px;
-                height: 3px;
-                background: var(--color-primary-light);
-                margin: 1rem auto;
-                border-radius: 2px;
-            }
-
-            .profile-title {
-                font-size: 0.9rem;
-                letter-spacing: 2px;
-                color: var(--color-text-secondary);
-                font-weight: 500;
-            }
-        }
-    }
+    
 
     /* Content Section */
     .content-section {
@@ -138,7 +132,7 @@ export const HeroContentStyled = styled.div`
             padding-top: 1rem;
         }
 
-        .profile-card {
+        ${ProfileCard} {
             position: static;
             width: 100%;
             max-width: 300px;

@@ -1,13 +1,14 @@
 import React from "react";
-import { HeroContentStyled } from "./Hero.styles";
+import { HeroContentStyled, ProfileCard } from "./Hero.styles";
 import sunnies from '../../images/profile/sunnies.jpg'
+import { FloatingCard } from "../FloatingCard";
 
 const Hero = () => {
     return (
         <HeroContentStyled>
             <main className="main-content">
                 <div className="hero-section">
-                    <div className="profile-card">
+                    <ProfileCard>
                         <div className="profile-image-container">
                             <img 
                                 src={sunnies} 
@@ -21,7 +22,7 @@ const Hero = () => {
                             <div className="profile-divider"></div>
                             <p className="profile-title">FULL STACK SOFTWARE ENGINEER</p>
                         </div>
-                    </div>
+                    </ProfileCard>
                 
                     <div className="content-section">
                         <h1 className="main-heading">Hello</h1>
