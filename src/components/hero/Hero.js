@@ -25,17 +25,29 @@ const Hero = () => {
                     </ProfileCard>
                 
                     <div className="content-section">
-                        <h1 className="main-heading">Hello</h1>
-                        <h2 className="sub-heading">Here's who I am & what I do</h2>
+                        <h1 className="main-heading">Hi there!</h1>
+                        <h2 className="sub-heading">Welcome to my digital space</h2>
                         
                         
                         <div className="description">
                             <p>
-                                I'm a paragraph. I will soon be filled with information about myself and what I do.
+                                I'm a recent Software Engineering graduate, I'm passionate about
+                                creating elegant technical solutions to real world problems, and crafting the perfect cup of coffee,
+                                to make everyday lives that little bit better.
                             </p>
                             
                             <p>
-                                It's a great place for me to tell a story and let people know what I'm doing.
+                                With a fresh mindset, 5 years of software engineering practice, 
+                                and 12 years in hospitality and management, I bring both precision 
+                                and creativity to everything I do!
+                            </p>
+
+                            <p>
+                                Check out my projects!
+                            </p>
+
+                            <p>
+                                Or, find me on: 
                             </p>
                         </div>
                     </div>
