@@ -2,44 +2,56 @@ import React, { useEffect, useState } from "react";
 import { HeroContentStyled, ProfileCard } from "./Hero.styles";
 import sunnies from '../../images/profile/sunnies.jpg'
 import { FloatingCard } from '../Card'
+import { usePageTransition } from "../../hooks/usePageTransition";
 
 const Hero = () => {
-    const [animate, setAnimate] = useState(false);
+    const { isExiting, isEntering, navigateWithTransition } = usePageTransition();
 
-    useEffect(() => {
-        const timer = setTimeout(() => {
-            setAnimate(true);
-        }, 100);
-        return () => clearTimeout(timer);
-    }, []);
+    const handleProjectsClick = () => {
+        navigateWithTransition('/projects');
+    };
 
     return (
         <HeroContentStyled>
             <main className="main-content">
                 <div className="hero-section">
-                    <ProfileCard
-                        className={`profile-card ${animate ? 'slide-in' : ''}`}
+                    <div 
+                        className={`profile-section ${
+                            isExiting 
+                                ? 'slide-out-left' 
+                                : isEntering 
+                                    ? 'slide-in-left' 
+                                    : ''
+                        }`}
                         style={{
-                            animationDelay: `0.1s`
+                            animationDelay: `${isExiting ? '0s' : '0.1s'}`
                         }}
                     >
-                        <div className="profile-image-container">
-                            <img 
-                                src={sunnies} 
-                                alt="Josie Leye"
-                                className="profile-image"
-                            />
-                        </div>
-                    
-                        <div className="profile-info">
-                            <h2 className="profile-name">Josie Leye</h2>
-                            <div className="profile-divider"></div>
-                            <p className="profile-title">FULL STACK SOFTWARE ENGINEER</p>
-                        </div>
-                    </ProfileCard>
+                        <ProfileCard>
+                            <div className="profile-image-container">
+                                <img 
+                                    src={sunnies} 
+                                    alt="Josie Leye"
+                                    className="profile-image"
+                                />
+                            </div>
+                        
+                            <div className="profile-info">
+                                <h2 className="profile-name">Josie Leye</h2>
+                                <div className="profile-divider"></div>
+                                <p className="profile-title">FULL STACK SOFTWARE ENGINEER</p>
+                            </div>
+                        </ProfileCard>
+                    </div>
                 
                     <div 
-                        className={`content-section ${animate ? 'slide-in' : ''}`}
+                        className={`content-section ${
+                            isExiting 
+                                ? 'slide-out-left' 
+                                : isEntering 
+                                    ? 'slide-in-left' 
+                                    : ''
+                        }`}
                         style={{
                             animationDelay: `0s`
                         }}
@@ -62,7 +74,20 @@ const Hero = () => {
                             </p>
 
                             <p>
-                                Check out my projects!
+                                Check out my{' '}
+                                <button 
+                                    onClick={handleProjectsClick}
+                                    style={{
+                                        background: 'none',
+                                        border: 'none',
+                                        color: 'var(--color-primary)',
+                                        textDecoration: 'underline',
+                                        cursor: 'pointer'
+                                    }}
+                                >
+                                    projects
+                                </button>
+                                !
                             </p>
 
                             <p>

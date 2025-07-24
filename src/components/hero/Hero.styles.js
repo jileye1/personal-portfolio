@@ -51,13 +51,28 @@ export const ProfileCard = styled(FloatingCard)`
 
 export const HeroContentStyled = styled.div`
 
-    .profile-card, .content-section {
+    .profile-section, .content-section {
         opacity: 0;
         transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .slide-in {
+    /* Enter Animations */
+    .slide-in-left {
         animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .slide-in-right {
+        animation: slideInRight 0.8s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+    }
+
+    /* Exit Animations */
+    .slide-out-left {
+        animation: slideOutLeft 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        animation-delay: 0s;
+    }
+
+    .slide-out-right {
+        animation: slideOutRight 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
     @keyframes slideInLeft {
@@ -68,6 +83,40 @@ export const HeroContentStyled = styled.div`
         to {
             transform: translateX(0);
             opacity: 1;
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
+    /* Exit Keyframes */
+    @keyframes slideOutLeft {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+    }
+
+    @keyframes slideOutRight {
+        from {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        to {
+            transform: translateX(100px);
+            opacity: 0;
         }
     }
 

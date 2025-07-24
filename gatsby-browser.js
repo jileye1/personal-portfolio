@@ -42,6 +42,12 @@ const GlobalStyle = createGlobalStyle`
     background-color: #f8f5fc;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: opacity 0.6s ease-in-out;
+  }
+
+  body.page-exiting {
+    opacity: 0;
+    transform: translateX(-20px);
   }
 
   /* Smooth scrolling */
