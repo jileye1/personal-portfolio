@@ -21,6 +21,12 @@ module.exports = {
     },
     __key: "pages"
   }, {
+    resolve: 'gatsby-source-filesystem',
+    options: {
+      name: `myprojects`,
+      path: `${__dirname}/myprojects`,
+    }
+  }, {
     resolve: 'gatsby-plugin-manifest',
     options: {
       name: `Josie's Portfolio Site`,
