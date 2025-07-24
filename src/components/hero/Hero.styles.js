@@ -57,16 +57,16 @@ export const HeroContentStyled = styled.div`
     }
 
     .slide-in {
-        animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        animation: slideInTop 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     }
 
-    @keyframes slideInLeft {
+    @keyframes slideInTop {
         from {
-            transform: translateX(-100px);
+            transform: translateY(-100px);
             opacity: 0;
         }
         to {
-            transform: translateX(0);
+            transform: translateY(0);
             opacity: 1;
         }
     }
