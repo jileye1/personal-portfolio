@@ -51,6 +51,26 @@ export const ProfileCard = styled(FloatingCard)`
 
 export const HeroContentStyled = styled.div`
 
+    .profile-card, .content-section {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .slide-in {
+        animation: slideInLeft 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes slideInLeft {
+        from {
+            transform: translateX(-100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+
     /* Main Content */
     .main-content {
         min-height: calc(100vh - 80px);
