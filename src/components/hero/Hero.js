@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { HeroContentStyled, ProfileCard } from "./Hero.styles";
 import sunnies from '../../images/profile/sunnies.jpg'
+import sunset from '../../images/sunset.jpg'
 import { FloatingCard } from '../Card'
 
 const Hero = () => {
@@ -25,7 +26,7 @@ const Hero = () => {
                     >
                         <div className="profile-image-container">
                             <img 
-                                src={sunnies} 
+                                src={sunset} 
                                 alt="Josie Leye"
                                 className="profile-image"
                             />
