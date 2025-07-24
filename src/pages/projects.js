@@ -1,11 +1,12 @@
 import * as React from 'react'
 import Seo from '../components/seo'
 import BaseLayout from '../components/baselayout/BaseLayout'
+import Projects from '../components/projects/Projects'
 
 const ProjectPage = () => {
   return (
     <BaseLayout title="Projects">
-        <div>This is where the projects will be</div>
+        <Projects></Projects>
     </BaseLayout>
   )
 }
