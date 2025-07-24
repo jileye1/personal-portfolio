@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { FloatingCard } from "../FloatingCard"
+import { FloatingCard } from "../Card"
 
 export const ProfileCard = styled(FloatingCard)`
     text-align: center;
@@ -50,7 +50,26 @@ export const ProfileCard = styled(FloatingCard)`
 `
 
 export const HeroContentStyled = styled.div`
-    min-height: 100vh;
+
+    .profile-card, .content-section {
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .slide-in {
+        animation: slideInTop 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes slideInTop {
+        from {
+            transform: translateY(-100px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
 
     /* Main Content */
     .main-content {
@@ -106,6 +125,20 @@ export const HeroContentStyled = styled.div`
         }
     }
 
+    // .skills-section {
+
+
+    //     .section-header {
+        
+    //     }
+
+    //     .skills-content {
+    //         display: grid;
+    //         grid-template-columns: 1fr 1fr;
+    //     }
+    
+    // }
+
     /* Responsive Design */
     @media (max-width: 768px) {
 
@@ -136,6 +169,10 @@ export const HeroContentStyled = styled.div`
                 font-size: 3rem;
             }
         }
+
+        // .skills-content {
+        //     grid-template-columns: 1fr;
+        // }
     }
 
 `

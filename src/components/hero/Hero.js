@@ -1,14 +1,28 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { HeroContentStyled, ProfileCard } from "./Hero.styles";
 import sunnies from '../../images/profile/sunnies.jpg'
-import { FloatingCard } from "../FloatingCard";
+import { FloatingCard } from '../Card'
 
 const Hero = () => {
+    const [animate, setAnimate] = useState(false);
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setAnimate(true);
+        }, 100);
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
         <HeroContentStyled>
             <main className="main-content">
                 <div className="hero-section">
-                    <ProfileCard>
+                    <ProfileCard
+                        className={`profile-card ${animate ? 'slide-in' : ''}`}
+                        style={{
+                            animationDelay: `0.1s`
+                        }}
+                    >
                         <div className="profile-image-container">
                             <img 
                                 src={sunnies} 
@@ -24,7 +38,12 @@ const Hero = () => {
                         </div>
                     </ProfileCard>
                 
-                    <div className="content-section">
+                    <div 
+                        className={`content-section ${animate ? 'slide-in' : ''}`}
+                        style={{
+                            animationDelay: `0s`
+                        }}
+                    >
                         <h1 className="main-heading">Hi there!</h1>
                         <h2 className="sub-heading">Welcome to my digital space</h2>
                         
@@ -52,6 +71,15 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+                {/* <div className="skills-section">
+                    <div className="section-header">
+                        <h2>What I brew with</h2>
+                    </div>
+                    <div className="skills-content">
+                        <FloatingCard></FloatingCard>
+                        <FloatingCard></FloatingCard>
+                    </div>
+                </div> */}
             </main>
         </HeroContentStyled>
     )
