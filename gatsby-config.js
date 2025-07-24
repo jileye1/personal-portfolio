@@ -3,8 +3,8 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Personal Portfolio`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Josie's Site`,
+    siteUrl: `https://josieleye.netlify.app`
   },
   plugins: ["gatsby-plugin-styled-components", "gatsby-plugin-image", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
     resolve: 'gatsby-source-filesystem',
@@ -20,5 +20,16 @@ module.exports = {
       "path": "./src/pages/"
     },
     __key: "pages"
+  }, {
+    resolve: 'gatsby-plugin-manifest',
+    options: {
+      name: `Josie's Portfolio Site`,
+      short_name: `Josie's Site`,
+      start_url: `/`,
+      background_color: `#ffffff`,
+      theme_color: `#bb8fce`,
+      display: `minimal-ui`,
+      icon: `src/images/icon.png`,
+    }
   }]
 };
