@@ -9,13 +9,15 @@ export const Card = styled.div`
 `;
 
 export const FloatingCard = styled(Card)`
-    box-shadow: -8px 8px 10px rgba(0, 0, 0, 0.15);
+    box-shadow: -10px 10px 20px rgba(0, 0, 0, 0.45);
     backdrop-filter: blur(10px);
 `;
 
 export const ClickableCard = styled(FloatingCard)`
+    box-shadow: -10px 10px 10px rgba(0, 0, 0, 0.15);
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+
     &:hover {
         transform: translateY(-4px);
         box-shadow: -12px 12px 20px rgba(0, 0, 0, 0.2);
