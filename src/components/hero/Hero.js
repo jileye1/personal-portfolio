@@ -1,7 +1,7 @@
 import React from "react";
 import { HeroContentStyled, ProfileCard } from "./Hero.styles";
 import sunnies from '../../images/profile/sunnies.jpg'
-import { FloatingCard } from "../FloatingCard";
+import { FloatingCard } from '../Card'
 
 const Hero = () => {
     return (

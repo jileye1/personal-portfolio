@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { FloatingCard } from "../FloatingCard"
+import { FloatingCard } from "../Card"
 
 export const ProfileCard = styled(FloatingCard)`
     text-align: center;
