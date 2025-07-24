@@ -50,7 +50,6 @@ export const ProfileCard = styled(FloatingCard)`
 `
 
 export const HeroContentStyled = styled.div`
-    min-height: 100vh;
 
     /* Main Content */
     .main-content {
@@ -106,6 +105,20 @@ export const HeroContentStyled = styled.div`
         }
     }
 
+    // .skills-section {
+
+
+    //     .section-header {
+        
+    //     }
+
+    //     .skills-content {
+    //         display: grid;
+    //         grid-template-columns: 1fr 1fr;
+    //     }
+    
+    // }
+
     /* Responsive Design */
     @media (max-width: 768px) {
 
@@ -136,6 +149,10 @@ export const HeroContentStyled = styled.div`
                 font-size: 3rem;
             }
         }
+
+        // .skills-content {
+        //     grid-template-columns: 1fr;
+        // }
     }
 
 `

@@ -52,6 +52,15 @@ const Hero = () => {
                         </div>
                     </div>
                 </div>
+                {/* <div className="skills-section">
+                    <div className="section-header">
+                        <h2>What I brew with</h2>
+                    </div>
+                    <div className="skills-content">
+                        <FloatingCard></FloatingCard>
+                        <FloatingCard></FloatingCard>
+                    </div>
+                </div> */}
             </main>
         </HeroContentStyled>
     )

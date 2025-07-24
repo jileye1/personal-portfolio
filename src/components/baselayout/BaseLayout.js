@@ -34,6 +34,7 @@ flex-direction: column;
 }
 `
 const Main = styled.main`
+min-height: 100vh;
 flex: 1;
 `
 
